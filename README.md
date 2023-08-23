@@ -1,21 +1,13 @@
-# Convoy Bomb
-Convoy Bomb is a game originally for Sinclair ZX81 in [ZX FORTH by Artic](http://www.zx81stuff.org.uk/zx81/tape/ZXForth),
-but now in [GForth](https://gforth.org/) using XTerm (or similar) with Unicode. 
-You also need
-[semigraphics](https://github.com/mobluse/semigraphics). How to install and run in Linux:
+# Forked
 
-    sudo apt install gforth
-    git clone https://github.com/mobluse/semigraphics
-    git clone https://github.com/mobluse/convoy-bomb
-    cd convoy-bomb
-    gforth convoy-bomb.g.fs
-    convoy-bomb
-    show-cur ( if you terminate using Ctrl+C )
-    bye
+I forked from [mobluse/convoy-bomb](https://github.com/mobluse/convoy-bomb)
 
-Convoy Bomb is in Swedish; both instructions and code. Use without Caps Lock or Shift.
-B drops a bomb. N/L means New Line i.e. Enter AKA Return. ZX81 does not have ÅÄÖ,
-but I used 0 for Ö on ZX81 (0 looks like Ø (Danish Ö) on ZX81),
-but in the GForth version I now use ÅÄÖ in the text and comments.
+# Goal 
 
-![Convoy Bomb](2023-08-07-062013_623x847_scrot.png)
+Just keep the drop idea, but make it very different, using Unicode chars as graphical sprites.
+
+I would also keep the original game translated in English and maybe improve it too.
+
+In both cases, I assume risk of restricting code to gnu-forth & Unicode capable terminal compatibility only.
+
+
