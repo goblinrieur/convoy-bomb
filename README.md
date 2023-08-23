@@ -2,6 +2,10 @@
 
 I forked from [mobluse/convoy-bomb](https://github.com/mobluse/convoy-bomb)
 
+# Proof of concept 
+
+[video](./proofofconcept/SGF.fs.mp4)
+
 # Goal 
 
 Just keep the drop idea, but make it very different, using Unicode chars as graphical sprites.

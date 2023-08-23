@@ -9,7 +9,7 @@
 \
 : pose_bat	( y x -- uc ) at-xy boat xemit ;
 : pose_hom	( y x -- uc ) at-xy man xemit ;
-: pose_hel	( y x -- uc ) at-xy 128641 xemit ;
+: pose_hel	( y x -- uc ) at-xy helicopter xemit ;
 : pose_vid	( y x -- uc ) at-xy bl emit ;
 \
 : shortdelay 80 ms ;	\ seems good to both be fast & limit blink effect
@@ -20,12 +20,14 @@
 	path 0 do
 	    path i - dup					\ comes from right to left
 		heli_y pose_hel shortdelay
-	    boat_x = if  
-			5 1 do
-				boat_x i pose_hom shortdelay	\ drop a man 
-				boat_x i pose_vid shortdelay 	\ clean this coordonate
-			loop
-         	THEN 
+	    boat_x = key? and if 			\ sumultaneous ? 
+			key 32 = if					\ & key is space 
+				5 1 do
+					boat_x i pose_hom shortdelay	\ drop a man 
+					boat_x i pose_vid shortdelay 	\ clean this coordonate
+				loop
+			then
+       	THEN 
 	loop								\ continue flight
 	7 0 do 
 		cr								\ to keep drawings before exit
